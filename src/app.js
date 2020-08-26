@@ -1,7 +1,5 @@
-require('dotenv').config({
-  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
-})
-require('./database')
+require('dotenv').config()
+require('./models')
 const express = require('express')
 
 const routes = require('./routes')

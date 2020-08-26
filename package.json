@@ -7,10 +7,10 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/server.js --ignore __tests__",
-    "start": "node src/server.js",
-    "pretest": "set NODE_ENV=test && sequelize db:migrate",
+    "start": "node src/server.js --env=production",
+    "pretest": "sequelize db:migrate --env=test",
     "test": "jest",
-    "posttest": "set NODE_ENV=test && sequelize db:migrate:undo:all"
+    "posttest": "sequelize db:migrate:undo:all --env=test"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
