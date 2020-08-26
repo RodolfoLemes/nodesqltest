@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    url: "postgres://postgres:30285843@localhost:5432/nodesqltest",
+    url: "",
     dialect: 'postgres',
     operatorAliases: false,
     logging: false,
